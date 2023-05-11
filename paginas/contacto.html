@@ -39,20 +39,21 @@
       <!--Inicio formulario-->
       <form id="form">
         <div class="field">
-          <label for="from_name">Ingrese su nombre</label>
+          <label for="from_name">from_name</label>
           <input type="text" name="from_name" id="from_name">
         </div>
         <div class="field">
-          <label for="message">¿En qué lo podemos ayudar?</label>
+          <label for="message">message</label>
           <input type="text" name="message" id="message">
         </div>
         <div class="field">
-          <label for="correo">Ingrese su correo</label>
-          <input type="text" name="email_id" id="correo">
+          <label for="email_id">email_id</label>
+          <input type="text" name="email_id" id="email_id">
         </div>
       
-        <input type="submit" class="btn btn-succes" value="Enviar correo" onclick="validarCorreo(form.correo.value)"/>
+        <input type="submit" id="button" value="Send Email" >
       </form>
+      
       <script src="contacto.js"></script>
       <!--Termino de fromulario-->
       <!--Footer-->
