@@ -36,25 +36,25 @@
       <!--Termino de navbar-->
 
       <!--Inicio formulario-->
+      <div aling= "center"></div>
       <form id="form">
         <div class="field">
-          <label for="from_name">from_name</label>
+          <label for="from_name">Ingrese su nombre</label>
           <input type="text" name="from_name" id="from_name">
         </div>
         <div class="field">
-          <label for="message">message</label>
+          <label for="message">¿En qué lo podemos ayudar?</label>
           <input type="text" name="message" id="message">
         </div>
         <div class="field">
-          <label for="email_id">email_id</label>
-          <input type="text" name="email_id" id="email_id">
+          <label for="correo">Ingrese su correo</label>
+          <input type="text" name="email_id" id="correo">
         </div>
       
-        <input type="submit" id="button" value="Send Email" >
+        <input type="submit" class="btn btn-succes" value="Enviar correo" onclick="validarCorreo(form.correo.value)"/>
       </form>
       <script src="contacto.js"></script>
       <!--Termino de fromulario-->
-
 
 </body>
 </html>
