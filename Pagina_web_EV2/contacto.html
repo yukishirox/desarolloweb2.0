@@ -10,6 +10,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!--Codigo formulario-->
     <link rel="stylesheet" href="contacto.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> 
+    <script type="text/javascript">
+    emailjs.init('6lxuB3oaehvjtDqLG')
+    </script>
+
     <title>Contactanos</title>
 </head>
 <body>
@@ -31,35 +36,23 @@
       <!--Termino de navbar-->
 
       <!--Inicio formulario-->
-      <div class="container">
-        <form onsubmit="sendEmail(); reset(); return false;">
-          <h3>HOLA</h3>
-          <input type="text" id="name" placeholder="Nombre" required>
-          <input type="email" id="email" placeholder="Email" required>
-          <input type="text" id="phone" placeholder="Numero de telefono" required>
-          <textarea id="message" rows="10" placeholder="¿Como puedo ayudarte?"></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-      <script src="https://smtpjs.com/v3/smtp.js"></script>
-      <script>
-        function sendEmail(){
-          Email.send({
-            Host : "smtp.gmail.com",
-            Username : "kathstreasures@gmail.com",
-            Password : "882DB810B383E854EC41E43317A1A7106D1F",
-            To : 'allison.katherina@gmail.com',
-            From : document.getElementById("email").value,
-            Subject : "Nuevo contacto de Kath's Treasures",
-            Body : "Nombre: " + document.getElementById("name").value
-            + "<br> Email: " + document.getElementById("email").value
-            + "<br> Numero de telefono: " + document.getElementById("phone").value
-            + "<br> Mensaje: " + document.getElementById("message").value
-          }).then(
-            message => alert(message)
-          );
-        }
-      </script>
+      <form id="form">
+        <div class="field">
+          <label for="from_name">from_name</label>
+          <input type="text" name="from_name" id="from_name">
+        </div>
+        <div class="field">
+          <label for="message">message</label>
+          <input type="text" name="message" id="message">
+        </div>
+        <div class="field">
+          <label for="email_id">email_id</label>
+          <input type="text" name="email_id" id="email_id">
+        </div>
+      
+        <input type="submit" id="button" value="Send Email" >
+      </form>
+      <script src="contacto.js"></script>
       <!--Termino de fromulario-->
 
 
